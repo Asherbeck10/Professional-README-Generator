@@ -1,6 +1,7 @@
 
 import inquirer from 'inquirer';
 import fs from "fs/promises";
+const licenses=['Apache 2.0', 'The MIT License', 'Mozilla Public License 2.0', 'IBM Public License Version 1.0']
 
 //user input
 const { title,description,installation,usage,license,contributing,tests,gitHubUserName,gitHubProfile,email} = await inquirer
@@ -73,7 +74,7 @@ const { title,description,installation,usage,license,contributing,tests,gitHubUs
             type: 'list',
             name: 'license',
             message: 'Chose a license from the following list:',
-            choices: ['Apache 2.0', 'The MIT License', 'Mozilla Public License 2.0', 'IBM Public License Version 1.0'],
+            choices: licenses,
             filter(val) {
               return val.toLowerCase();
          },
@@ -142,13 +143,13 @@ ${tests}
 
  function createBanner(license) {
     switch (license) {
-        case 'apache 2.0':
+        case licenses[0].toLowerCase():
         return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
-        case 'the mit license':
+        case licenses[1].toLowerCase():
         return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
-        case 'mozilla public license 2.0':
+        case licenses[2].toLowerCase():
         return '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)';
-        case 'ibm public license version 1.0':
+        case licenses[3].toLowerCase():
         return '![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)';
           
     
@@ -158,7 +159,8 @@ ${tests}
     
 }
         
-    console.log(createBanner(license))
+
+
     
 //creating and writing to a README file.
 
