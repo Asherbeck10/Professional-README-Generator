@@ -132,7 +132,7 @@ ${tests}
 
 ## Questions
 * My github username is: ${gitHubUserName}
-* You can find my github profile [here](${gitHubProfile})
+* You can find my github profile here: ${gitHubProfile}
 * For any question please email me to: ${email}
 
 `
