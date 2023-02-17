@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import fs from "fs/promises";
 
 //user input
-const { title,description,installation,usage,license} = await inquirer
+const { title,description,installation,usage,license,contributing,tests} = await inquirer
     .prompt([
         {
             name: 'title',
@@ -28,6 +28,21 @@ const { title,description,installation,usage,license} = await inquirer
             name: 'usage',
             message: "Provide instructions and examples for use:",
             type: 'input',
+            
+            
+        },
+        {
+            name: 'contributing',
+            message: "Provide  guidelines for how to contribute:",
+            type: 'input',
+            
+            
+        },
+        {
+            name: 'tests',
+            message: "Write tests for your application. Then provide examples on how to run them here:",
+            type: 'input',
+        
             
             
         },
@@ -79,20 +94,18 @@ ${usage}
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+ Licensed under  ${license.toUpperCase()}.
 
----
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
 
 
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
+${contributing}
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+${tests}
+
 
 ## Questions
 `
@@ -124,4 +137,4 @@ Go the extra mile and write tests for your application. Then provide examples on
 //creating and writing to a README file.
 
 await fs.writeFile("README.md", readmeText)
-console.log('well done!')
+console.log('well done! 🏆')
