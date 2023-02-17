@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import fs from "fs/promises";
 
 //user input
-const { title,description,installation,usage,license,contributing,tests} = await inquirer
+const { title,description,installation,usage,license,contributing,tests,gitHubUserName,gitHubProfile,email} = await inquirer
     .prompt([
         {
             name: 'title',
@@ -46,6 +46,28 @@ const { title,description,installation,usage,license,contributing,tests} = await
             
             
         },
+        {
+            name: 'gitHubUserName',
+            message: "What is your github username?",
+            type: 'input',
+            
+            
+        },
+        {
+            name: 'gitHubProfile',
+            message: "Provide  a link to your github profile:",
+            type: 'input',
+            
+            
+        },
+        {
+            name: 'email',
+            message: "What is your email address?",
+            type: 'input',
+            
+            
+        },
+        
 
         {
             type: 'list',
@@ -108,6 +130,10 @@ ${tests}
 
 
 ## Questions
+* My github username is: ${gitHubUserName}
+* You can find my github profile [here](${gitHubProfile})
+* For any question please email me to: ${email}
+
 `
 
 

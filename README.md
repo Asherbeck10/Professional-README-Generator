@@ -1,11 +1,11 @@
 
 
 
-# My awsome project
+# 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
-just doing good
+
 
 
 
@@ -23,11 +23,11 @@ just doing good
 
 ## Installation
 
-install beer
+
 
 ## Usage
 
-drink a lot
+
 
 ## License
 
@@ -37,11 +37,15 @@ drink a lot
 
 ## Contributing
 
-it is very easy
+
 
 ## Tests
 
-push hard
+
 
 
 ## Questions
+* My github username is: ;
+* You can find my github profile [here]();
+* For any question please email me to: asher@gmail.com
+
