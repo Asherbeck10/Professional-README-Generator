@@ -3,7 +3,7 @@ import inquirer from 'inquirer';
 import fs from "fs/promises";
 
 //user input
-const { title,description,installation,usage,license } = await inquirer
+const { title,description,installation,usage,license} = await inquirer
     .prompt([
         {
             name: 'title',
@@ -42,7 +42,7 @@ const { title,description,installation,usage,license } = await inquirer
          },
         },
     ])
-    console.log(license)
+    
 
 //README template
 
@@ -96,12 +96,21 @@ Go the extra mile and write tests for your application. Then provide examples on
 
 ## Questions
 `
+
+
+
 //license banner
 
  function createBanner(license) {
     switch (license) {
         case 'apache 2.0':
         return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
+        case 'the mit license':
+        return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
+        case 'mozilla public license 2.0':
+        return '![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)';
+        case 'ibm public license version 1.0':
+        return '![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)';
           
     
         default:
