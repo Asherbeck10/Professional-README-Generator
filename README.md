@@ -61,7 +61,7 @@ You can watch this demo
 
 ![Demo](assets/Demo.gif)
 
-Or for better quality [watch this walkthrough video](https://drive.google.com/file/d/11ST_L_QVak3SSjXI2bjELqfJpzj9-Ewe/view?usp=sharing)
+Or for better quality [download this walkthrough video](https://drive.google.com/file/d/11ST_L_QVak3SSjXI2bjELqfJpzj9-Ewe/view?usp=sharing)
 
 ## License
 [The MIT License](https://opensource.org/licenses/MIT)
